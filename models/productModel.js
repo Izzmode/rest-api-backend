@@ -76,7 +76,6 @@ exports.getProductById = (req, res) => {
 
 //Update
 
-// Dish.findByIdAndUpdate(req.params.id, { name }, { new: true })
 
 exports.updateProduct = (req, res) => {
     Product.findByIdAndUpdate(req.params.id, req.body, { new: true })
