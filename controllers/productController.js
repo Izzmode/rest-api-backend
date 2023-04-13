@@ -14,6 +14,5 @@ router.put('/:id', productModel.updateProduct);
 //Delete
 router.delete('/:id', productModel.deleteProduct);
 
-//TBD middleware verify 2.37 lektion 8 
 
 module.exports = router;

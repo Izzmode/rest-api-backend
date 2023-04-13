@@ -13,7 +13,6 @@ exports.createUser = (req, res) => {
             message: "All fields need to be entered"
         })
     }
-
   
     //sparar saltning i en variabel
     const salt = bcrypt.genSaltSync();
@@ -32,7 +31,8 @@ exports.createUser = (req, res) => {
         User.create({ email, password: hash })
         .then(user => {
             res.status(201).json({
-                token: auth.generateToken(user)
+                token: auth.generateToken(user),
+                id: user._id
             })
         })
     })
@@ -74,7 +74,8 @@ User.findOne({ email })
 
         //det stämde, topp!
         res.status(200).json({
-            token: auth.generateToken(user)
+            token: auth.generateToken(user),
+            id: user._id
         })
     });
 

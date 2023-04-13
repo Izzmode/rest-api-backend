@@ -1,7 +1,5 @@
 const Product = require('../schemas/productSchema');
 
-//FIXA FELHANTERING!!!
-
 //Create
 
 //Skapar en produkt
@@ -82,7 +80,7 @@ exports.updateProduct = (req, res) => {
     .then (data => {
         if(!data) {
             res.status(404).json({
-                message: "Could not find product to delete"
+                message: "Could not find product to update"
             })
             return
         }
