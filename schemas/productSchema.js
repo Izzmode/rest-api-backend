@@ -9,17 +9,17 @@ const productSchema = mongoose.Schema({
 
     description: {
         type: String,
-        // required: true
+        required: true
     },
     
     price: {
         type: Number,
-        // required: true
+        required: true
     },
 
     imgURL: {
         type: String,
-        // required: true
+        required: true
     }, 
 }, { timestamps: true });
 

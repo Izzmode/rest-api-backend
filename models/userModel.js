@@ -9,7 +9,7 @@ exports.createUser = (req, res) => {
 
     //kort felhantering
     if(!email || !password) {
-        res.status(400).json({
+        return res.status(400).json({
             message: "All fields need to be entered"
         })
     }
@@ -42,7 +42,7 @@ exports.loginUser = (req, res) => {
 const { email, password } = req.body;
 
 if(!email || !password) {
-    res.status(400).json({
+    return res.status(400).json({
         message: "All fields need to be entered"
     })
 }
